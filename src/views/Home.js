@@ -10,7 +10,8 @@ export default class Home extends Component {
                 </div>
 
                 <div className="card-deck">
-
+                    {/* {this.props.products.map(p => ()) */}
+                        
                     <div className="card">
                         <div className="card-header">
                             <h6>

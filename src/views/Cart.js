@@ -4,7 +4,7 @@ export default class Cart extends Component {
     render() {
       return (
             <React.Fragment>
-                <h3>your cart</h3>
+                <h4>Shopping Cart</h4>
                 <hr />
                 <div className="card shopping-cart">
                     <div className="card-header bg-dark text-light">

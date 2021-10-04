@@ -8,7 +8,6 @@ import Login from '../views/Login.js';
 import Profile from '../views/Profile.js';
 import Register from '../views/Register.js';
 import Cart from '../views/Cart.js';
-import Product from '../views/Product';
 
 
 
@@ -39,11 +38,7 @@ export default class Main extends Component {
                             </ul>
                             <ul className="navbar-nav ml-auto">
                                 <li className="nav-item dropdown">
-                                    <Link className="nav-link dropdown-toggle" to="/cart" id="dropdownId" data-toggle="dropdown" aria-expanded="false">Cart</Link>
-                                    <div className="dropdown-menu" aria-labelledby="dropdownId">
-                                        <Link className="dropdown-item" to=".">Product</Link>
-                                        <Link className="dropdown-item" to="."> Total price</Link>
-                                    </div>
+                                    <Link className="nav-link " to="/cart" id="dropdownId" data-toggle="dropdown" aria-expanded="false">Cart</Link>
                                 </li>
                                 <li className="nav-item">
                                     <Link className="nav-link" to="/profile">Profile</Link>
@@ -63,14 +58,13 @@ export default class Main extends Component {
                 <main className="container">
 
                     <Switch>
-                        <Route exact path='/' render={() => <Home data={this.props.data} />} />
+                        <Route exact path='/' render={() => <Home products={this.props.products} />} />
                         <Route exact path='/about' render={() => <About />} />
                         <Route exact path='/contact' render={() => <Contact />} />
                         <Route exact path='/auth/login' render={() => <Login />} />
                         <Route exact path='/profile' render={() => <Profile />} />
                         <Route exact path='/register' render={() => <Register />} />
                         <Route exact path='/cart' render={() => <Cart />} />
-                        <Route exact path='/product' render={() => <Product />} />
                     </Switch>
 
                 </main>
